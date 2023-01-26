@@ -16,26 +16,30 @@ import axios from "axios";
 
 
 
-const url = 'https://jsonplaceholder.typicode.com/todos/1';
+const url = 'https://dummyjson.com/users/1';
 
-interface Todo{
+interface Detail{
     id: number;
-    title: string;
-    completed: boolean
+    firstName: string;
+    phone: number
 }
 axios.get(url)
 .then(response => {
     console.log(`The endpoint is reachable.`);
     // console.log(response.data);
-    const todo = response.data as Todo;
+
+    /*here we're telling typescript this will have the same 
+    structure as what is discribe as our Detail
+    */
+    const todo = response.data as Detail;
 
     const ID = todo.id;
-    const Title = todo.title;
-    const finished = todo.completed;
+    const firstName = todo.firstName;
+    const phone = todo.phone;
     console.log(`
     the todo with ID: ${ID}
-    has a title of: ${Title}
-    is it finished? ${finished}
+    has a title of: ${firstName}
+    is with a mobile number: ${phone}
     `)
 })
 .catch(error => {
