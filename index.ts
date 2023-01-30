@@ -36,13 +36,19 @@ axios.get(url)
     const ID = todo.id;
     const firstName = todo.firstName;
     const phone = todo.phone;
-    console.log(`
-    the todo with ID: ${ID}
-    has a title of: ${firstName}
-    is with a mobile number: ${phone}
-    `)
+    
+    LogDetail( ID, firstName, phone );
 })
+
+//checking for error in the endpoint
 .catch(error => {
     console.log(`The endpoint is not reachable: ${error}`);
 });
  
+const LogDetail = (id: number, firstName: string, phone: number)=>{
+    console.log(`
+    the todo with ID: ${id}
+    has a title of: ${firstName}
+    is with a mobile number: ${phone}
+    `)
+}
