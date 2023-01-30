@@ -1,21 +1,5 @@
 import axios from "axios";
 
-
-// const url = 'https://jsonplaceholder.typicode.com/todos/1'
-// interface Todo{
-//     id: number;
-//     title: string;
-//     completed: boolean;
-// }
-
-// axios.get<Todo>('https://jsonplaceholder.typicode.com/todos/1').then(response=>{
-//     console.log(response.data);
-// }).catch(error => {
-//     console.error(error);
-//  });
-
-
-
 const url = 'https://dummyjson.com/users/1';
 
 interface Detail{
@@ -31,11 +15,11 @@ axios.get(url)
     /*here we're telling typescript this will have the same 
     structure as what is discribe as our Detail
     */
-    const todo = response.data as Detail;
+    const detail = response.data as Detail;
 
-    const ID = todo.id;
-    const firstName = todo.firstName;
-    const phone = todo.phone;
+    const ID = detail.id;
+    const firstName = detail.firstName;
+    const phone = detail.phone;
     
     LogDetail( ID, firstName, phone );
 })
@@ -47,7 +31,7 @@ axios.get(url)
  
 const LogDetail = (id: number, firstName: string, phone: number)=>{
     console.log(`
-    the todo with ID: ${id}
+    the detal with ID: ${id}
     has a title of: ${firstName}
     is with a mobile number: ${phone}
     `)
