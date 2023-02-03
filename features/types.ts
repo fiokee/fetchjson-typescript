@@ -13,4 +13,11 @@ class Color {
 
 }
 
-const red = new Color();
+let color: Color = new Color();
+
+//Object
+
+let point: {x: number; y: number} = {
+    x: 10,
+    y: 20
+};
