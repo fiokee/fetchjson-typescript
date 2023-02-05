@@ -31,7 +31,8 @@ const logNumber: (i:number)=> void = (i:number)=>{
     console.log(i)
 }
 
-
+let color =;
+color = 'red'
 
 // const logString: (i:string)=> void = (i: string)=>{
 //     console.log(i)
