@@ -43,12 +43,24 @@ console.log(coordinates)
 
 //when we declare a variable on one line and initialize it later
 
+//little app that gets to check if the words exist or not
 const words = ['red', 'yellow', 'green']
-let foundWord;
+let foundWord: boolean;
 
 for(let i = 0; i < words.length; i++){
     
     if(words[i] === "green"){
         foundWord = true;
+    }
+}
+
+// variables whose type cannot be inferred
+
+let nums = [-10, -13, 12];
+let numberAbove: boolean | number = false;
+
+for(let i = 0; i < nums.length; i++){
+    if(nums[i] > 0){
+        numberAbove = nums[i]
     }
 }
