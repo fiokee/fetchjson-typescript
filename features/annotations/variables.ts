@@ -1,3 +1,5 @@
+
+
 let apples: number = 5;
 console.log(apples)
 // types in typescript
@@ -31,9 +33,22 @@ const logNumber: (i:number)=> void = (i:number)=>{
     console.log(i)
 }
 
-let color =;
-color = 'red'
 
 // const logString: (i:string)=> void = (i: string)=>{
 //     console.log(i)
 // }
+const json = '{"x": 10, "y": 20}';
+const coordinates:{y: number; x:number} = JSON.parse(json)
+console.log(coordinates)
+
+//when we declare a variable on one line and initialize it later
+
+const words = ['red', 'yellow', 'green']
+let foundWord;
+
+for(let i = 0; i < words.length; i++){
+    
+    if(words[i] === "green"){
+        foundWord = true;
+    }
+}
