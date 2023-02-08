@@ -36,6 +36,8 @@ const logNumber: (i:number)=> void = (i:number)=>{
 
 // const logString: (i:string)=> void = (i: string)=>{
 //     console.log(i)
+
+//THIS ARE DIFFERENT METHODS TO APPLY TYPE ANNOTATIONS
 // }
 const json = '{"x": 10, "y": 20}';
 const coordinates:{y: number; x:number} = JSON.parse(json)
